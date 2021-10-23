@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-US" style="font-family:calibri">
+<head>
+
+<title>The Periodic Table of Elements</title>
+<img src="https://lh3.googleusercontent.com/bcoEIpaWIodjT1frZoYjHqzeVfhNaapD33XsCJlifKSmdmvs6O6I7g-8a4tNL5SSuvBEkhokbvxFVAseqJ490rvZpPBBRieTsouQrk2ESegkUb2D_NmjLLmq-GMwdOqoS_UB2utwOVAV3DTjpCfW1wN4tJrZ1rTYp7n38yvs2gJBCDQ693KxW0apsYGQubdl-O-rG3jKJh6VoMBTZvXJJHOMunX7niaEEQpApzb0t_vyZNoR5XeYT857iS_LepTUszRcm6SQuJ1BtAMdyMjPs7xdhPFSjpKLYy9Ox1flAe8HMeYasp4DkeSgmEHxmFXUAGxzuN9bfFjkDdk6OeyeAkNQn85mLDQNAXss661A0jfDQOWWBmmXyZENavOxHi3MiNpN6pBWp1VuKdw5IVRRHOvLTE1dao30EesgiZaTVPL2R40IhQwvySAmaaLSayt7dpSjqaIQ3BEL3e0r4WUEh-_w5Xct4RHKfpMrLrkVh9CmsKYaAJwac9MRPogp1CMCtM3dmpxIH-hHWC0iyAPXNz2F0uzjsCyqgEWd43NdKIXFNo99Udz50HJqJF6hPR3rVrQhfpBRgn9Si0iRs01oxZ0xCPNfcLPewLTUrgugvgDJVZlKb5Nl_uSAWTDQrO79XAYWUegJaMa1Qo9r7YVTykxvQ4pRC52O1fpuzE1pf1SpUYW7STF7lLCrCA=w544-h157-no">
+
+<style>
+.button {
+ background-color: #fca25d;
+ border: none;
+ color: white;
+ padding: 10px 10px;
+ padding: auto;
+ text-align: center;
+ display: inline-block;
+ font-size: 16px;
+}
+</style>
+
+<script type="text/javascript">
+
+ var elementList = ["Hydrogen","Helium","Lithium","Beryllium","Boron","Carbon","Nitrogen","Oxygen","Fluorine","Neon","Sodium","Magnesium","Aluminum","Silicon","Phosphorus","Sulfur","Chlorine","Argon","Potassium","Calcium","Scandium","Titanium","Vanadium","Chromium","Manganese","Iron","Cobalt","Nickel","Copper","Zinc","Gallium","Germanium","Arsenic","Selenium","Bromine","Krypton","Rubidium","Strontium","Yttrium","Zirconium","Niobium","Molybdenum","Technetium","Ruthenium","Rhodium","Palladium","Silver","Cadmium","Indium","Tin","Antimony","Tellurium","Iodine","Xenon","Cesium","Barium","Lanthanum","Cerium","Praseodymium","Neodymium","Promethium","Samarium","Europium","Gadolinium","Terbium","Dysprosium","Holmium","Erbium","Thulium","Ytterbium","Lutetium","Hafnium","Tantalum","Tungsten","Rhenium","Osmium","Iridium","Platinum","Gold","Mercury","Thallium","Lead","Bismuth","Polonium","Astatine","Radon","Francium","Radium","Actinium","Thorium","Protactinium","Uranium","Neptunium","Plutonium","Americium","Curium","Berkelium","Californium","Einsteinium","Fermium","Mendelevium","Nobelium","Lawrencium","Rutherfordium","Dubnium","Seaborgium","Bohrium","Hassium","Meitnerium","Darmstadtium","Roentgenium","Copernicium","Nihonium","Flerovium","Moscovium","Livermorium","Tennessine","Oganessom"];
+
+ var symbolList = ["H","He","Li","Be","B","C","Ni","O","F","Ne","Na","Mg","Al","Si","P","S","Cl","Ar","K","Ca","Sc","Ti","V","Cr","Mn","Fe","Co","Ni","Cu","Zn","Ga","Ge","As","Se","Br","Kr","Rb","Sr","Y","Zr","Nb","Mo","Tc","Ru","Rh","Pd","Ag","Cd","In","Sn","Sb","Te","I","Xe","Cs","Ba","La","Ce","Pr","Nd","Pm","Sm","Eu","Gd","Tb","Dy","Ho","Er","Tm","Yb","Lu","Hf","Ta","W","Re","Os","Ir","Pt","Au","Hg","Ti","Pb","Bi","Po","At","Rn","Fr","Ra","Ac","Th","Pa","U","Np","Pu","Am","Cm","Bk","Cf","Es","Fm","Md","No","Lr","Rf","Db","Sg","Bh","Hs","Mt","Ds","Rg","Cn","Nh","Fl","Mc","Lv","Ts","Og"];
+
+ var sLG =  ["Gas","Gas","Solid","Solid","Solid","Solid","Gas","Gas","Gas","Gas","Solid","Solid","Solid","Solid","Solid","Solid","Gas","Gas","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Liquid","Gas","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Gas","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Liquid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Solid","Gas"];
+
+ var type = ["-","Nobel Gas","Alkali Metal","Alkali-Earth Metal", "Metalloid", "-","-","-","Halogen","Nobel Gas","Alkali Metal","Alkali-Earth Metal","-","Metalloid", "-","-","Halogen","Nobel Gas","Alkali Metal","Alkali-Earth Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","-","Metalloid","Metalloid","-","Halogen","Nobel Gas","Alkali Metal","Alkali-Earth Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","-","-","Metalloid","Metalloid", "Halogen","Nobel Gas","Alkali Metal","Alkali-Earth Metal","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Lanthanoid","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","-","-","-","-","Metalloid/Halogen","Nobel Gas","Alkali Metal","Alkali-Earth Metal","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Actinoid","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","Transition Metal","-","-","-","-","Metalloid/Halogen","Nobel Gas"];
+
+ var mmm = ["Non-metal","Non-metal","Metal","Metal","Metaloide","Non-metal","Non-metal","Non-metal","Non-metal","Non-metal","Metal","Metal","Metal","Metaloide","Non-metal","Non-metal","Non-metal","Non-metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metaloide","Metaloide","Non-metal","Non-metal","Non-metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metaloide","Metaloide","Non-metal","Non-metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metaloide","Non-metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metal","Metaloide","Non-metal"];
+
+ var group = ["1","18","1","2","13","14","15","16","17","18","1","2","13","14","15","16","17","18","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","1","2","3","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","1","2","3","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","N/A","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18"];
+
+ var period = ["1","1","2","2","2","2","2","2","2","2","3","3","3","3","3","3","3","3","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","4","5","5","5","5","5","5","5","5","5","5","5","5","5","5","5","5","5","5","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","6","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7","7"];
+
+ /**This method has a loop that "types" the list of all the elements.
+ */
+  function allElementName(){
+      var allTheElements="";
+      var i=0;
+      while (i<=117) {
+        allTheElements+=elementList[i]+" ";
+        i++;
+      }
+      document.getElementById("allElements").innerHTML = "" + allTheElements;
+    }
+
+  function pickElementfromAtomicNumber(){
+    var vAtomicNumber = document.getElementById('atomicNumber').value; //gets the input
+    var elementName=elementList[vAtomicNumber-1]; //changes the input to value, then look that up at elementList's index.
+    if (vAtomicNumber<=0||vAtomicNumber>=119) {
+      elementName="Please Enter a number between 1 and 118";
+    }
+    document.getElementById("atomicNumtoNameParagraph").innerHTML = "Answer should appear here: "+elementName;
+  }
+
+  function symbomMatcher(){
+   var symbol = document.getElementById('elementSymbol').value;
+   var i=0;
+   var symbolToElement="";
+   while (i<=117) {
+     if (symbol==(symbolList[i])) {
+       symbolToElement=elementList[i];
+     }
+     i++;
+   }
+   document.getElementById("symboltoNameParagraph").innerHTML = "Answer should appear here: "+symbolToElement;
+ }
+
+  function elementInfo(){
+    var theElement= document.getElementById('elementInfa').value;
+    var i=0;
+    var x=0;
+    while (i<=117) {
+      if (theElement==elementList[i])
+          x=i;
+      i++;
+    }
+   document.getElementById("textElementInfo").innerHTML = "Name: "+elementList[x]+"\nSymbol: "+symbolList[x]+"\nState at STP: "+sLG[x]+"\nType: "+type[x]+"\nType "+mmm[x]+"\nPeriod: "+period[x];
+  }
+
+ function specialelementInfo(z) {
+
+   var theElement=z;
+   var i=0;
+   var x=0;
+   while (i<=117) {
+     if (theElement==elementList[i])
+         x=i;
+     i++;
+   }
+
+  document.getElementById("tableInfo").innerHTML = "You Clicked on the Element....\nName: "+elementList[x]+"\nSymbol: "+symbolList[x]+"\nState at STP: "+sLG[x]+"\nType: "+type[x]+"\nType "+mmm[x]+"\nPeriod: "+period[x] ;
+ }
+</script>
+
+</head>
+<body style="background-color:#7FFFD4;" >
+<h1>Periodic Table of Elements</h1>
+<p style="color:#808080">Periodic Table of Elements. Data is based off of <a href="https://www.iupac.org" style="color:darkgray"><abbr title="International Union Of Pure and Applied Chemistry">IUPAC</abbr></a><br></p>
+<p style="color:#808080">
+
+<hr>
+
+<p id="allElements"></p>
+<button type="button" onclick="allElementName()" class="button" >Click to display all the Elements</button></p>
+
+<hr>
+
+  <p>
+  <form target="_self" method="post">
+  Enter Atomic Number <input type="number" min="1" max="118" id="atomicNumber">
+  <button type="button" onclick="pickElementfromAtomicNumber()">Enter</button><input type="reset">
+  </form>
+  <p id="atomicNumtoNameParagraph">Answer should appear here:</p>
+  </p>
+
+<hr>
+
+  <p>
+  <form>
+  Enter Element Symbol <input type="text" id="elementSymbol">
+  <button type="button" onclick="symbomMatcher()">Enter</button><input type="reset">
+  </form>
+  <p id="symboltoNameParagraph">Answer should appear here:</p>
+
+<hr>
+
+  <p>
+  <form>
+  Enter Element Name, to get information about that Element <input type="text" id="elementInfa">
+  <button type="button" onClick="elementInfo()">Enter</button><input type="reset">
+  </form>
+<pre style="font-family:calibri" id="textElementInfo">
+Name:
+Symbol:
+State at STP:
+Type:
+Type
+Period:
+</pre>
+
+<hr>
+
+
+  <table>
+<colgroup>
+  <col span="18" style="background-color:white">
+</colgroup>
+
+<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th>
+
+<tr>
+  <th><a onClick="specialelementInfo('Hydrogen')"><u>H</u></a></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th><a onClick="specialelementInfo('Helium')"><u>He</u></a></th>
+</tr>
+
+<tr>
+  <th><a onClick="specialelementInfo('Lithium')" ><u>Li</u></a></th>
+  <th><a onClick="specialelementInfo('Beryllium')"><u>Be</u></a></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th><a onClick="specialelementInfo('Boron')"><u>B</u></a></th>
+  <th><a onClick="specialelementInfo('Carbon')"><u>C</u></a></th>
+  <th><a onClick="specialelementInfo('Nitrogen')"><u>N</u></a></th>
+  <th><a onClick="specialelementInfo('Oxygen')"><u>O</u></a></th>
+  <th><a onClick="specialelementInfo('Fluorine')"><u>F</u></a></th>
+  <th><a onClick="specialelementInfo('Neon')"><u>Ne</u></a></th>
+</tr>
+
+<tr>
+  <th><a onClick="specialelementInfo('Sodium')"><u>Na</u></a></th>
+  <th><a onClick="specialelementInfo('Magnesium')"><u>Mg</u></a></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th></th>
+  <th><a onClick="specialelementInfo('Aluminum')"><u>Al</u></a></th>
+  <th><a onClick="specialelementInfo('Silicon')"><u>Si</u></a></th>
+  <th><a onClick="specialelementInfo('Phosphorus')"><u>P</u></a></th>
+  <th><a onClick="specialelementInfo('Sulfur')"><u>S</u></a></th>
+  <th><a onClick="specialelementInfo('Chlorine')"><u>Cl</u></a></th>
+  <th><a onClick="specialelementInfo('Argon')"><u>Ar</u></a></th>
+</tr>
+
+<tr>
+  <th><a onClick="specialelementInfo('Potassium')"><u>K</u></a></th>
+  <th><a onClick="specialelementInfo('Calcium')"><u>Ca</u></a></th>
+  <th><a onClick="specialelementInfo('Scandium')"><u>Sc</u></a></th>
+  <th><a onClick="specialelementInfo('Titanium')"><u>Ti</u></a></th>
+  <th><a onClick="specialelementInfo('Vanadium')"><u>V</u></a></th>
+  <th><a onClick="specialelementInfo('Chromium')"><u>Cr</u></a></th>
+  <th><a onClick="specialelementInfo('Manganese')"><u>Mn</u></a></th>
+  <th><a onClick="specialelementInfo('Iron')"><u>Fe</u></a></th>
+  <th><a onClick="specialelementInfo('Cobalt')"><u>Co</u></a></th>
+  <th><a onClick="specialelementInfo('Nickel')"><u>Ni</u></a></th>
+  <th><a onClick="specialelementInfo('Copper')"><u>Cu</u></a></th>
+  <th><a onClick="specialelementInfo('Zinc')"><u>Zn</u></a></th>
+  <th><a onClick="specialelementInfo('Gallium')"><u>Ga</u></a></th>
+  <th><a onClick="specialelementInfo('Germanium')"><u>Ge</u></a></th>
+  <th><a onClick="specialelementInfo('Astatine')"><u>As</u></a></th>
+  <th><a onClick="specialelementInfo('Selenium')"><u>Se</u></a></th>
+  <th><a onClick="specialelementInfo('Bromine')"><u>Br</u></a></th>
+  <th><a onClick="specialelementInfo('Krypton')"><u>Kr</u></a></th>
+</tr>
+
+<tr>
+  <th><a onClick="specialelementInfo('Rubidium')"><u>Rb</u></a></th>
+  <th><a onClick="specialelementInfo('Strontium')"><u>Sr</u></a></th>
+  <th><a onClick="specialelementInfo('Yttrium')"><u>Y</u></a></th>
+  <th><a onClick="specialelementInfo('Zirconium')"><u>Zr</u></a></th>
+  <th><a onClick="specialelementInfo('Niobium')"><u>Nb</u></a></th>
+  <th><a onClick="specialelementInfo('Molybdenum')"><u>Mo</u></a></th>
+  <th><a onClick="specialelementInfo('Technetium')"><u>Tc</u></a></th>
+  <th><a onClick="specialelementInfo('Ruthenium')"><u>Ru</u></a></th>
+  <th><a onClick="specialelementInfo('Rhodium')"><u>Rh</u></a></th>
+  <th><a onClick="specialelementInfo('Palladium')"><u>Pd</u></a></th>
+  <th><a onClick="specialelementInfo('Silver')"><u>Ag</u></a></th>
+  <th><a onClick="specialelementInfo('Cadmium')"><u>Cd</u></a></th>
+  <th><a onClick="specialelementInfo('Indium')"><u>In</u></a></th>
+  <th><a onClick="specialelementInfo('Tin')"><u>Sn</u></a></th>
+  <th><a onClick="specialelementInfo('Antimony')"><u>Sb</u></a></th>
+  <th><a onClick="specialelementInfo('Tellurium')"><u>Te</u></a></th>
+  <th><a onClick="specialelementInfo('Iodine')"><u>I</u></a></th>
+  <th><a onClick="specialelementInfo('Xenon')"><u>Xe</u></a></th>
+</tr>
+
+<tr>
+  <th><a onClick="specialelementInfo('Cesium')"><u>Cs</u></a></th>
+  <th><a onClick="specialelementInfo('Barium')"><u>Ba</u></a></th>
+  <th>-</th>
+  <th><a onClick="specialelementInfo('Hafnium')"><u>Hf</u></a></th>
+  <th><a onClick="specialelementInfo('Tantalum')"><u>Ta</u></a></th>
+  <th><a onClick="specialelementInfo('Tungsten')"><u>W</u></a></th>
+  <th><a onClick="specialelementInfo('Rhenium')"><u>Re</u></a></th>
+  <th><a onClick="specialelementInfo('Osmium')"><u>Os</u></a></th>
+  <th><a onClick="specialelementInfo('Iridium')"><u>Ir</u></a></th>
+  <th><a onClick="specialelementInfo('Platinum')"><u>Pt</u></a></th>
+  <th><a onClick="specialelementInfo('Gold')"><u>Au</u></a></th>
+  <th><a onClick="specialelementInfo('Mercury')"><u>Hg</u></a></th>
+  <th><a onClick="specialelementInfo('Thallium')"><u>Ti</u></a></th>
+  <th><a onClick="specialelementInfo('Lead')"><u>Pb</u></a></th>
+  <th><a onClick="specialelementInfo('Bismuth')"><u>Bi</u></a></th>
+  <th><a onClick="specialelementInfo('Polonium')"><u>Po</u></a></th>
+  <th><a onClick="specialelementInfo('Astatine')"><u>At</u></a></th>
+  <th><a onClick="specialelementInfo('Radon')"><u>Rn</u></a></th>
+</tr>
+
+<tr>
+  <th><a onClick="specialelementInfo('Francium')"><u>Fr</u></a></th>
+  <th><a onClick="specialelementInfo('Radium')"><u>Ra</u></a></th>
+  <th>-</th>
+  <th><a onClick="specialelementInfo('Rutherfordium')"><u>Rf</u></a></th>
+  <th><a onClick="specialelementInfo('Dubnium')"><u>Db</u></a></th>
+  <th><a onClick="specialelementInfo('Seaborgium')"><u>Sg</u></a></th>
+  <th><a onClick="specialelementInfo('Bohrium')"><u>Bh</u></a></th>
+  <th><a onClick="specialelementInfo('Hassium')"><u>Hs</u></a></th>
+  <th><a onClick="specialelementInfo('Meitnerium')"><u>Mt</u></a></th>
+  <th><a onClick="specialelementInfo('Darmstadtium')"><u>Ds</u></a></th>
+  <th><a onClick="specialelementInfo('Roentgenium')"><u>Rg</u></a></th>
+  <th><a onClick="specialelementInfo('Copernicium')"><u>Cn</u></a></th>
+  <th><a onClick="specialelementInfo('Nihonium')"><u>Nh</u></a></th>
+  <th><a onClick="specialelementInfo('Flerovium')"><u>Fl</u></a></th>
+  <th><a onClick="specialelementInfo('Moscovium')"><u>Mc</u></a></th>
+  <th><a onClick="specialelementInfo('Livermorium')"><u>Lv</u></a></th>
+  <th><a onClick="specialelementInfo('Tennessine')"><u>Ts</u></a></th>
+  <th><a onClick="specialelementInfo('Oganessom')"><u>Og</u></a></th>
+</tr>
+<tr style="background-color:#7FFFD4"><th></th></tr> <!--Used to creates tiny space between the two sections of the table--->
+<tr>
+  <th style="background-color:#7FFFD4"></th>
+  <th style="background-color:#7FFFD4"></th>
+  <th style="background-color:#7FFFD4"></th>
+  <th><a onClick="specialelementInfo('Lanthanum')"><u>La</u></a></th>
+  <th><a onClick="specialelementInfo('Cerium')"><u>Ce</u></a></th>
+  <th><a onClick="specialelementInfo('Praseodymium')"><u>Pr</u></a></th>
+  <th><a onClick="specialelementInfo('Neodymium')"><u>Nd</u></a></th>
+  <th><a onClick="specialelementInfo('Promethium')"><u>Pm</u></a></th>
+  <th><a onClick="specialelementInfo('Samarium')"><u>Sm</u></a></th>
+  <th><a onClick="specialelementInfo('Europium')"><u>Eu</u></a></th>
+  <th><a onClick="specialelementInfo('Gadolinium')"><u>Gd</u></a></th>
+  <th><a onClick="specialelementInfo('Terbium')"><u>Tb</u></a></th>
+  <th><a onClick="specialelementInfo('Dysprosium')"><u>Dy</u></a></th>
+  <th><a onClick="specialelementInfo('Holmium')"><u>Ho</u></a></th>
+  <th><a onClick="specialelementInfo('Erbium')"><u>Er</u></a></th>
+  <th><a onClick="specialelementInfo('Thulium')"><u>Tm</u></a></th>
+  <th><a onClick="specialelementInfo('Ytterbium')"><u>Yb</u></a></th>
+  <th><a onClick="specialelementInfo('Lutetium')"><u>Lu</u></a></th>
+</tr>
+
+<tr>
+  <th style="background-color:#7FFFD4"></th>
+  <th style="background-color:#7FFFD4"></th>
+  <th style="background-color:#7FFFD4"></th>
+  <th><a onClick="specialelementInfo('Actinium')"><u>Ac</u></a></th>
+  <th><a onClick="specialelementInfo('Thorium')"><u>Th</u></a></th>
+  <th><a onClick="specialelementInfo('Protactinium')"><u>Pa</u></a></th>
+  <th><a onClick="specialelementInfo('Uranium')"><u>U</u></a></th>
+  <th><a onClick="specialelementInfo('Neptunium')"><u>Np</u></a></th>
+  <th><a onClick="specialelementInfo('Plutonium')"><u>Pu</u></a></th>
+  <th><a onClick="specialelementInfo('Americium')"><u>Am</u></a></th>
+  <th><a onClick="specialelementInfo('Curium')"><u>Cm</u></a></th>
+  <th><a onClick="specialelementInfo('Berkelium')"><u>Bk</u></a></th>
+  <th><a onClick="specialelementInfo('Californium')"><u>Cf</u></a></th>
+  <th><a onClick="specialelementInfo('Einsteinium')"><u>Es</u></a></th>
+  <th><a onClick="specialelementInfo('Fermium')"><u>Fm</u></a></th>
+  <th><a onClick="specialelementInfo('Mendelevium')"><u>Md</u></a></th>
+  <th><a onClick="specialelementInfo('Nobelium')"><u>No</u></a></th>
+  <th><a onClick="specialelementInfo('Lawrencium')"><u>Lr</u></a></th>
+</tr>
+</table>
+
+<pre id="tableInfo" style="font-family:calibri" >
+You Clicked on the Element....
+Name:
+Symbol:
+State at STP:
+Type:
+Type
+Period:
+</pre>
+<p>(c) 2018 | version 0.1.0 Please Note: Not all feature are fully inplemented yet.</p>
+<!---HEY ARE YOU LOOKING THOUGH MY CODE?--->
+</body>
+</html>
